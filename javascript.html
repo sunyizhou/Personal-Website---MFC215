@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang=en>
+<head>
+    <title>Yizhou Sun</title>
+
+    <style>
+        table,th,td{
+            border: solid black 5px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<script>
+    var date = new Date();
+    var CurdayThisMonth = date.getDate();
+    var CurMonth = date.getMonth()+1;
+    var CurYear = date.getFullYear();
+
+    var CurHour=date.getHours();
+    var CurMin=date.getMinutes();
+    var CurSec=date.getSeconds();
+
+    date =CurMonth + '/' + CurdayThisMonth + '/' + CurYear;
+    time =CurHour + ':' + CurMin +':' + CurSec;
+
+    document.write("Date:" + date + "   " + time);
+</script>
+
+
+<br>
+<br>
+<script>
+    var Homework = ["Brief Introduction",
+                      "Create Your buffalo.edu Home Page",
+                      "Create a Set of Cascading Style Sheets (CSS) Pages",
+                      "Create a CSS-Styled Table Page",
+                      "Create an HTML5/CSS3 Compliant Home Page",
+                      "Modify Your Home Page to use DIVs for Layout",
+                      "What Makes a Good/Bad Web Site Discussion",
+                      "Create an Advanced (Special Effects) Web Page Using CSS",
+                      "Create an HTML5 Form Page",
+                      "Create a Multimedia Web Site",
+                      "Create a JavaScript Web Page",
+                      "Use JavaScript to Validate a Web Form","Create a Final \"Wow Me!\" Web Site",
+                      "Krug Book Web Site (Extra Credit)"];
+
+    var deadline = [ "09/03/2018" ,
+                       "09/10/2018" ,
+                       "09/17/2018" ,
+                       "09/24/2018" ,
+                       "10/01/2018" ,
+                       "10/08/2018" ,
+                       "10/15/2018" ,
+                       "10/29/2018" ,
+                       "11/05/2018" ,
+                       "11/12/2018" ,
+                       "11/19/2018" ,
+                       "11/26/2018" ,
+                       "12/03/2018" ,];
+
+    var today = new Date();
+    var date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
+
+    for (i = 0; i < 13; i++) {
+        var Days = new Date(date);
+        var DaysForDeadline = new Date(deadline[i]);
+        var LeftMonth = Math.abs(Days.getTime() - DaysForDeadline.getTime());
+        var Leftdays = Math.ceil(LeftMonth / (1000 * 3600 * 24));
+
+        if (Days.getTime() > DaysForDeadline.getTime()) {
+            document.write(Homework[i] + " is :     "+ Leftdays + " Days between the due days (Completed)" + "<br>" + "<br>");
+        } else {
+            document.write(Homework[i] + " is :     "  + Leftdays +" Days between the due days (Still working on)" + "<br>" + "<br>");
+        }
+
+    }
+
+</script>
+
+
+<fieldset>
+    <table class="table">
+        <tr>
+            <th>Month Number</th>
+            <th>Month Name</th>
+            <th>Days in Month</th>
+        </tr>
+
+        <script>
+
+            function Howmanydays(month,year) {
+                return new Date(year, month, 0).getDate();
+            }
+
+            var monthss = [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
+
+            for(i=1;i<monthss.length+1;i++){
+                if(i % 2 == 0){
+                    document.write('<tr style= "background-color: deepskyblue"><td>'+ i + '</td> <td>'+ monthss[i-1] + '</td> <td>'+ Howmanydays(i,2018)+'</td> </tr>');
+                }else{
+                    document.write('<tr><td>'+ i +'</td> <td>'+ monthss[i-1] + '</td> <td>'+ Howmanydays(i,2018)+'</td> </tr>');
+                }
+            }
+        </script>
+
+
+    </table>
+
+</fieldset>
+<br>
+<a href="index.html">Home Page</a>
+</body>
+
+</html>

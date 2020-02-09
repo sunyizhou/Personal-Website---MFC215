@@ -1,0 +1,45 @@
+ p{
+        color: greenyellow;
+        font-family: system-ui;
+        font-size: 20px;
+    }
+    h1{
+        color: blue;
+        font-family: system-ui;
+        font-size: 20px;
+    }
+    h2{
+        color: royalblue;
+        font-family: system-ui;
+        font-size: 20px;
+    }
+    h3{
+        color: firebrick;
+        font-family: system-ui;
+        font-size: 20px;
+    }
+    h4{
+        color: green;
+        font-family: system-ui;
+        font-size: 20px;
+    }
+    h5{
+        color: darkkhaki;
+        font-family: system-ui;
+        font-size: 20px;
+    }
+    h6{
+        color: navajowhite;
+        font-family: system-ui;
+        font-size: 20px;
+    }
+    b{
+        font-weight: bold;
+    }
+    table, th, td {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+    a{
+        font-size: 20px;
+    }

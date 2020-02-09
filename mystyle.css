@@ -1,0 +1,42 @@
+#Introduct {
+font-family: 'Verdana', 'serif';
+}
+img{
+height:50px;
+width: 50px;
+float:right;
+}
+
+table {
+border: 0px;
+border-style:  solid;
+}
+
+table th, td {
+border-style: none;
+}
+
+@media print {
+a {
+color: green;
+}
+
+img {
+display: none;
+}
+
+li {
+list-style-type:square;
+}
+
+#intro {
+font-family: 'Arial', 'sans-serif';
+}
+
+table th, td {
+border: 1px;
+border-style:  solid;
+}
+
+
+}

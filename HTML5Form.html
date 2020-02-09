@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<title>HTML5 Form Page</title>
+    <style>
+        fieldset{
+            display: inline-block;
+        }
+        legend{
+            font-size: 30px;
+        }
+        label{
+            font-size: 25px;
+        }
+        .button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius:30%;
+        }
+        .button:hover{
+            color: black;
+            font-size: 16px;
+            transition: 1s;
+        }
+    </style>
+    </head>
+
+<body style="background-color:skyblue;">
+<div style="text-align:center;">
+
+        <form id="hw7" method="POST" action="mailto:yizhousu@buffalo.edu">
+
+            <fieldset>
+                <legend> Collect Information</legend>
+                <br><label for="FName">First Name:</label><br>
+                <input  required id="FName" name="FName" type="text" placeholder="First Name, Last Name"/><br class="clear">
+                <br><label for="LName">Last Name:</label><br>
+                <input required id="LName" name="LName" type="text" placeholder="First Name, Last Name"/><br class="clear">
+                <br><label for="Address">Address:</label><br>
+                <input required id="Address" name="Address" type="text" placeholder="Enter your address in here :)"/><br class="clear">
+                <br><label for="City">City:</label><br>
+                <input required id="City" name="City" type="text" placeholder="Enter your city in here :)"/><br class="clear">
+                <br><label for="State">State:</label><br>
+                <Select id="State" name="State">
+                    <option value="AL">Alabama (AL)</option>
+                    <option value="AK">Alaska (AK)</option>
+                    <option value="AZ">Arizona (AZ)</option>
+                    <option value="AR">Arkansas (AR)</option>
+                    <option value="CA">California (CA)</option>
+                    <option value="CO">Colorado (CO)</option>
+                    <option value="CT">Connecticut (CT)</option>
+                    <option value="DE">Delaware (DE)</option>
+                    <option value="FL">Florida (FL)</option>
+                    <option value="GA">Georgia (GA)</option>
+                    <option value="HI">Hawaii (HI)</option>
+                    <option value="ID">Idaho (ID)</option>
+                    <option value="IL">Illinois (IL)</option>
+                    <option value="IN">Indiana (IN)</option>
+                    <option value="IA">Iowa (IA)</option>
+                    <option value="KS">Kansas (KS)</option>
+                    <option value="KY">Kentucky (KY)</option>
+                    <option value="LA">Louisiana (LA)</option>
+                    <option value="ME">Maine (ME)</option>
+                    <option value="MD">Maryland (MD)</option>
+                    <option value="MA">Massachusetts (MA)</option>
+                    <option value="MI">Michigan (MI)</option>
+                    <option value="MN">Minnesota (MN)</option>
+                    <option value="MS">Mississippi (MS)</option>
+                    <option value="MO">Missouri (MO)</option>
+                    <option value="MT">Montana (MT)</option>
+                    <option value="NE">Nebraska (NE)</option>
+                    <option value="NV">Nevada (NV)</option>
+                    <option value="NH">New Hampshire (NH)</option>
+                    <option value="NJ">New Jersey (NJ)</option>
+                    <option value="NM">New Mexico (NM)</option>
+                    <option value="NY">New York (NY)</option>
+                    <option value="NC">North Carolina (NC)</option>
+                    <option value="ND">North Dakota (ND)</option>
+                    <option value="OH">Ohio (OH)</option>
+                    <option value="OK">Oklahoma (OK)</option>
+                    <option value="OR">Oregon (OR)</option>
+                    <option value="PA">Pennsylvania (PA)</option>
+                    <option value="RI">Rhode Island (RI)</option>
+                    <option value="SC">South Carolina (SC)</option>
+                    <option value="SD">South Dakota (SD)</option>
+                    <option value="TN">Tennessee (TN)</option>
+                    <option value="TX">Texas (TX)</option>
+                    <option value="UT">Utah (UT)</option>
+                    <option value="VT">Vermont (VT)</option>
+                    <option value="VA">Virginia (VA)</option>
+                    <option value="WA">Washington (WA)</option>
+                    <option value="WV">West Virginia (WV)</option>
+                    <option value="WI">Wisconsin (WI)</option>
+                    <option value="WY">Wyoming (WY)</option>
+
+                    <option value="WY">American Samoa(AS)</option>
+                    <option value="WY">District of Columbia(DC)</option>
+                    <option value="WY">Guam (GU)</option>
+                    <option value="WY">Northern Mariana Islands(MP)</option>
+                    <option value="WY">Puerto Rico (PR)</option>
+                    <option value="WY">Virgin Islands (VI)</option>
+
+                </select><br class="clear">
+
+                <br><label  for="zipcode">Zip/Postal Code:</label><br>
+                <input id="zipcode" required  pattern="[0-9]{5}" name="zipcode" type="text" placeholder="Enter your Zip/Postal Code:)"/><br class="clear">
+
+                <br><label for="phone">Phone:</label> <br>
+                <input   id="phone"  required  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  name="phone" type="tel" placeholder="xxx-xxx-xxxx"/><br class="clear">
+
+                <br><label for="email">Email Address:</label><br>
+                <input id="email" required name="email" type="email" placeholder="Enter your Email Address:)"/><br class="clear">
+            </fieldset>
+            <br><label for="submit"></label>
+            <button id="submit" class ="button" name="submit" type="submit" value="Do it!">OK Send My Data</button><br class="clear">
+        </form>
+
+
+        <div id="foot">
+            <a href="index.html">Home Page</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

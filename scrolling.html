@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Scrolling</title>
+    <style>
+        ul,li,p{
+            margin:0;padding:0;list-style: none
+        }
+        body{
+            padding:50px;
+            background:skyblue;
+        }
+        .scroll{
+            line-height:50px;
+            border:2px dashed gold;
+            padding:0 20px;
+            height:112px;
+            overflow:hidden;
+            background-color:#f1f1f1;
+        }
+
+        .backgroundEffect{
+            display: inline-block;
+            width: 100%;
+            height: 60px;
+            background-color: blue;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+        }
+        @-webkit-keyframes example {
+            from {background-color: blueviolet;}
+            to {background-color: green;}
+        }
+    </style>
+</head>
+
+
+<div class="scroll" id="scroll">
+    <div id="inner1">
+        <p style="color:red">Let's go it</p>
+        <p style="color:darkred">The homework</p>
+        <p style="color:yellow">GRE test</p>
+        <p style="color:darkolivegreen">and Projects</p>
+        <p style="color:darkorange">Even it is tired</p>
+        <p style="color:green">Think about next winter break</p>
+        <p style="color:deepskyblue">8 hour sleep</p>
+        <p style="color:orangered">and Happy</p>
+    </div>
+    <div id="inner2"></div>
+    <canvas id="tempp2"> </canvas>
+</div>
+
+<script>
+
+    function srcoll(){
+        var _scroll = document.getElementById("scroll"),
+            _inner1 = document.getElementById("inner1"),
+            _inner2 = document.getElementById("inner2"),
+            speed = 50;
+        _inner2.innerHTML = _inner1.innerHTML;
+        function marquee(){
+            if(_inner1.offsetHeight<=_scroll.scrollTop){
+                _scroll.scrollTop = 0
+            }else{
+                _scroll.scrollTop++;
+            }
+        }
+        var interval = setInterval(marquee,speed);
+        _scroll.onmouseover = function(){
+            clearInterval(interval);
+        }
+        _scroll.onmouseout = function(){
+            interval = setInterval(marquee,speed);
+        }
+    }
+    srcoll()
+</script>
+
+
+
+<div id="page" >
+    <canvas id="temp">
+        Your browser does not support the HTML 5 Canvas.
+    </canvas>
+    <canvas id="temp2">
+
+    </canvas>
+</div>
+<a href="MultimediaWeb.html">Multimedias Page</a>
+<br>
+<a href="index.html">Homepage</a>
+
+</body>
+</html>
